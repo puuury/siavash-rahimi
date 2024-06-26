@@ -15,3 +15,4 @@ rowItems.forEach((rowItem) => {
 });
 
 document.querySelector('.js-image-box').innerHTML = itemHTML;
+

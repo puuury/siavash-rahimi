@@ -36,3 +36,59 @@ window.onclick = function(event) {
 
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
+
+    // Close navbar on Esc key press
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            navbar.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+            navbar.classList.remove('active');
+        }
+    });
+
+    const rows = document.querySelectorAll('.row img');
+
+    rows.forEach(function(row) {
+        row.addEventListener('click', function() {
+            showModal(this.src);
+        });
+    });
+
+    function showModal(src) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const close = document.querySelector('.close');
+
+        modalImage.src = src;
+        modal.style.display = 'block';
+
+        close.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Close modal on Esc key press
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    }
+});
