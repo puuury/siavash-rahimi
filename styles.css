@@ -41,7 +41,9 @@ header a {
     font-size: 15px;
     font-weight: 500;
 }
-
+.navbar a:hover {
+    color: #888;
+}
 .hamburger {
     display: none;
     font-size: 30px;
@@ -174,6 +176,8 @@ footer {
 }
 
 footer a {
+    text-decoration: none;
+    color: #000;
     margin-left: 16px;
     font-size: 15px;
     font-weight: 500;
