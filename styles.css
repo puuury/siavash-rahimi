@@ -180,6 +180,9 @@ footer a {
 }
 
 @media screen and (max-width: 700px) {
+    .image-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .navbar {
         display: none;
         flex-direction: column;
