@@ -1,0 +1,36 @@
+.bioimgx  {
+    background-image:url("../image/sia01.jpg");
+
+    width: 75%;
+    height: 500px;
+    border-radius: 15px;
+    background-size: cover; 
+    background-position:top; 
+    transition: background-image 0.5s ease; 
+    
+}
+.biotext {
+    width: 72%;
+    margin-top: 35px;
+}
+.biotext span {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.biotext p {
+    text-align: left;
+    color: #333;
+    font-size: 18px;
+}
+.biotext p:hover {
+    color: #000;
+}
+.bioimgx:hover {
+    background-image: url('../image/sia02.png');
+    filter: blur(1px);
+    filter: drop-shadow(10px 10px 10px #000);
+    filter:grayscale(100%);
+    transition: 0.5s;
+}
