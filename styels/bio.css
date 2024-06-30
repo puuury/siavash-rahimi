@@ -29,6 +29,7 @@
 }
 .bioimgx:hover {
     background-image: url('../image/sia02.png');
+    scale: 1.1;
     filter: blur(1px);
     filter: drop-shadow(10px 10px 10px #000);
     filter:grayscale(100%);
